@@ -1,9 +1,17 @@
 Olá, tudo bem? Vou escrever aqui embaixo algumas considerações e suposições durante o desenvolvimento desse teste.
 
+O challenge está publicado na MASTER e não na MAIN. 
 
 Execute: npm i ou npm install para instalar as dependências.
 
 Execute: npm start para executar o projeto.
+
+Qualquer dúvida ou problema pra executar estou à disposição
+
+
+- ALTERAÇÃO NOS DADOS DE ENTRADA
+
+Precisei alterar os dados "numberOfPeople" e "weeklyRecipes" no front, pois precisei fazer um match correto com o que vem do listPlans, seguindo o Adobe XD, alguns valores no existiam no listPlans
 
 
 - DISTRIBUIÇÃO DOS ARQUIVOS
