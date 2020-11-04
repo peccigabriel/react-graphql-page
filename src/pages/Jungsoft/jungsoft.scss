@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 
 .woodspoon {
+
   &__titleMain {
     text-align: center;
     font-family: "Rubik", sans-serif;
     font-size: 25px;
     margin-bottom: 36px;
     font-weight: 400;
+    
 
     &--bold {
       font-weight: 700;
@@ -16,7 +18,7 @@
   &__container {
     max-width: 1230px;
     max-height: 403px;
-    margin: 0 80px;
+    margin: 0 auto;
     padding: 0 16px;
     display: flex;
   }
