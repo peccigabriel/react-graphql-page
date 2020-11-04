@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+Olá, tudo bem? Vou escrever aqui embaixo algumas considerações e suposições durante o desenvolvimento desse teste.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O challenge está publicado na MASTER e não na MAIN. 
 
-## Available Scripts
+Execute: npm i ou npm install para instalar as dependências.
 
-In the project directory, you can run:
+Execute: npm start para executar o projeto.
 
-### `npm start`
+Qualquer dúvida ou problema pra executar estou à disposição
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- ALTERAÇÃO NOS DADOS DE ENTRADA
 
-### `npm test`
+Precisei alterar os dados "numberOfPeople" e "weeklyRecipes" no front, pois precisei fazer um match correto com o que vem do listPlans, seguindo o Adobe XD, alguns valores no existiam no listPlans
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+- DISTRIBUIÇÃO DOS ARQUIVOS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Bom, optei por não componentizar a tela, pois pos se tratar de uma tela só não vi vantagens em quebrar os componentes que eu utilizei como o button por exemplo, por isso apliquei toda a lógica somente em uma página visto que o JSX da página é bem pequeno se não considerarmos os eventos.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A configuração do apollo está sendo feita na pasta service e seu provider é chamado no App.js (nível mais alto da aplicação).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Na pasta graphQL criei os dois arquivos (querie e mutation) que utilizei na comunicação do graphQl com o API de vocês.
 
-### `npm run eject`
+Por fim na pasta pages/jungsoft, vocês irão encontram o index.js com todo JSX, logica e comunicação com o graphQL, nessa mesma pasta se encontra o arquivo SCSS.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- LIBS E ADICIONAIS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Optei por utilizar o padrão BEM do CSS para construção dessa página, acredito ser um facilitador na leitura do código se usado corretamente.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Utilizei SASS como pré processador do CSS, utilizo ele diariamente por isso achei mais fácil trabalhar desse modo.
 
-## Learn More
+A única lib externa utilizada no projeto foi o sweetalert que gera os modais conforme a tratativa do button "Quero assinar"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- USO DOS HOOKS
 
-### Code Splitting
+Procurei utilizar os hooks da melhor maneira possível, de modo em que o código seja fácil de ser lido e curto de maneira geral.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Agradeço pela oportunidade, adoraria receber feedbacks sobre possíveis melhorias no código!
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
