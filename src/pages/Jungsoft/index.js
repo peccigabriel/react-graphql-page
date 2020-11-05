@@ -20,10 +20,12 @@ const JungsoftPage = () => {
     weeklyRecipes: 3,
   });
 
+  const [subscribeToPlan] = useMutation(CREATE_SUBSCRIBE);
   const { data } = useQuery(GET_PLANS);
   const listPlans = data?.listPlans;
 
-  const [subscribeToPlan] = useMutation(CREATE_SUBSCRIBE);
+  let arrayNumberOfPeople = [3, 4];
+  let arrayWeeklyRecipes = [3, 4, 5];
 
   useEffect(() => {
     if (listPlans) {
@@ -36,7 +38,7 @@ const JungsoftPage = () => {
             id: plan.id,
             price: plan.price,
           });
-        }
+        } 
       });
     }
   }, [dataOn, listPlans]);
@@ -46,7 +48,7 @@ const JungsoftPage = () => {
     if (receiverData.id) {
       subscribeToPlan({
         variables: {
-          id: receiverData.id
+          id: receiverData.id,
         },
       })
         .then((res) =>
@@ -92,36 +94,23 @@ const JungsoftPage = () => {
                 </span>
               </div>
               <div className="woodspoon__button">
-                <button
-                  className={
-                    dataOn.numberOfPeople === 3
-                      ? 'woodspoon__button--active'
-                      : 'woodspoon__button--normal'
-                  }
-                  onClick={(e) =>
-                    setDataOn({
-                      ...dataOn,
-                      numberOfPeople: parseInt(e.target.innerText),
-                    })
-                  }
-                >
-                  3
-                </button>
-                <button
-                  className={
-                    dataOn.numberOfPeople === 4
-                      ? 'woodspoon__button--active'
-                      : 'woodspoon__button--normal'
-                  }
-                  onClick={(e) =>
-                    setDataOn({
-                      ...dataOn,
-                      numberOfPeople: parseInt(e.target.innerText),
-                    })
-                  }
-                >
-                  4
-                </button>
+                {arrayNumberOfPeople.map((item) => (
+                  <button
+                    className={
+                      dataOn.numberOfPeople === item
+                        ? 'woodspoon__button--active'
+                        : 'woodspoon__button--normal'
+                    }
+                    onClick={(e) =>
+                      setDataOn({
+                        ...dataOn,
+                        numberOfPeople: parseInt(e.target.innerText),
+                      })
+                    }
+                  >
+                    {item}
+                  </button>
+                ))}
               </div>
             </div>
             <div className="woodspoon__selectplan">
@@ -130,51 +119,23 @@ const JungsoftPage = () => {
                 <span>Quantas receitas por semana?</span>
               </div>
               <div className="woodspoon__button">
-                <button
-                  className={
-                    dataOn.weeklyRecipes === 3
-                      ? 'woodspoon__button--active'
-                      : 'woodspoon__button--normal'
-                  }
-                  onClick={(e) =>
-                    setDataOn({
-                      ...dataOn,
-                      weeklyRecipes: parseInt(e.target.innerText),
-                    })
-                  }
-                >
-                  3
-                </button>
-                <button
-                  className={
-                    dataOn.weeklyRecipes === 4
-                      ? 'woodspoon__button--active'
-                      : 'woodspoon__button--normal'
-                  }
-                  onClick={(e) =>
-                    setDataOn({
-                      ...dataOn,
-                      weeklyRecipes: parseInt(e.target.innerText),
-                    })
-                  }
-                >
-                  4
-                </button>
-                <button
-                  className={
-                    dataOn.weeklyRecipes === 5
-                      ? 'woodspoon__button--active'
-                      : 'woodspoon__button--normal'
-                  }
-                  onClick={(e) =>
-                    setDataOn({
-                      ...dataOn,
-                      weeklyRecipes: parseInt(e.target.innerText),
-                    })
-                  }
-                >
-                  5
-                </button>
+                {arrayWeeklyRecipes.map((item) => (
+                  <button
+                    className={
+                      dataOn.weeklyRecipes === item
+                        ? 'woodspoon__button--active'
+                        : 'woodspoon__button--normal'
+                    }
+                    onClick={(e) =>
+                      setDataOn({
+                        ...dataOn,
+                        weeklyRecipes: parseInt(e.target.innerText),
+                      })
+                    }
+                  >
+                    {item}
+                  </button>
+                ))}
               </div>
             </div>
           </div>
