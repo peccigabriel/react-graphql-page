@@ -8,10 +8,12 @@ Execute: npm start para executar o projeto.
 
 Qualquer dúvida ou problema pra executar estou à disposição
 
-
 - ALTERAÇÃO NOS DADOS DE ENTRADA
 
 Precisei alterar os dados "numberOfPeople" e "weeklyRecipes" no front, pois precisei fazer um match correto com o que vem do listPlans, seguindo o Adobe XD, alguns valores no existiam no listPlans
+
+#EDIT 1
+### Adicionei um array setando os números do "numberOfPeople" e "weeklyRecipes" no front e fiz um map para diminuir as declarações dos buttons no JSX.
 
 
 - DISTRIBUIÇÃO DOS ARQUIVOS
